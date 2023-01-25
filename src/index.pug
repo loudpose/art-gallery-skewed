@@ -1,0 +1,38 @@
+doctype html
+html(lang="en")
+	head
+		// Meta
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+
+		base(href="/")
+
+		title='Averyano'
+
+		meta(name="description", content='Starting repository')
+		meta(name="keywords", content="art")
+		meta(name="msapplication-TileColor", content="#000")
+		meta(name="theme-color", content="#ffffff")
+
+		meta(property="og:type" content="website")
+		meta(property="og:site_name" content='Averyano')
+		meta(property="og:title" content='Web Developer')
+		meta(property="og:description" content='Starting repository')
+		//- meta(property="og:image" content='/img/og_image.jpg')
+
+		meta(name="twitter:card" content="summary_large_image")
+		meta(name="twitter:title" content='Averyano')
+		meta(name="twitter:description" content='Starting repository')
+		//- meta(name="twitter:image" content='./img/og_image.jpg')
+
+		// Styles
+		link(rel="stylesheet", href="./styles/index.scss")
+
+	body
+		include ./views/nav
+
+		include ./views/page
+		
+		include ./views/footer
+
+	script(type="module", src="./js/index.js")

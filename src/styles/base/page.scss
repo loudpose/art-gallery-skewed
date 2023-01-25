@@ -1,0 +1,15 @@
+h1 {
+  font-size: 4rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+main {
+  min-height: 96vh;
+}
+
+.content {
+  @extend %center;
+}

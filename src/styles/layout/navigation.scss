@@ -1,0 +1,39 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  padding: 2rem 5%;
+}
+
+.nav__left {
+  flex-basis: 40%;
+}
+
+.nav__right {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 7.5rem;
+  font-size: 1.25rem;
+}
+
+.nav__logo {
+  display: block;
+  height: auto;
+  width: max-content;
+}
+.nav__logo img {
+  max-width: 64px;
+  height: auto;
+}
+
+.nav__menu__link {
+  color: hsl(0, 0, 30%);
+
+  &:hover {
+    color: hsl(0, 0, 0%);
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "parcel-2-starter",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "build": "parcel build src/index.pug",
+    "start": "parcel serve src/index.pug --port 3000 --public-url=http://127.0.0.1:3000 --no-cache"
+  },
+  "keywords": [],
+  "author": "Averyano",
+  "devDependencies": {
+    "@fontsource/roboto": "^4.5.8",
+    "@parcel/transformer-pug": "^2.8.3",
+    "@parcel/transformer-sass": "^2.8.3",
+    "parcel": "^2.8.3",
+    "parcel-namer-rewrite": "^2.0.0-rc.3"
+  },
+  "parcel-namer-rewrite": {
+    "rules": {
+      "(.*)\\.(css)": "css/$1.$2",
+      "(.*)\\.(js)": "js/$1.$2",
+      "(.*)\\.(woff2?)": "fonts/$1.$2",
+      "(.*)\\.(svg|png|gif|jpg)": "img/$1.$2"
+    },
+    "silent": true
+  }
+}
