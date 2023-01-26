@@ -1,2 +1,18 @@
+mixin socialIcon(link, image)
+	a(href=link target="_blank").footer__socials__link 
+		img(src=`./img/${image}.svg`, alt=link).footer__socials__icon
+
 footer.footer
-	p All rights reserved (c) 2023
+	a.footer__logo(href="https://averyano.com" target="_blank")
+		img(src="./img/av-black.png", alt="AV").footer__logo__image 
+	.footer__block 
+		.footer__text 
+			h1 by Averyano 
+			p 2023
+		.footer__socials 
+			+socialIcon("https://youtube.com/loudpose", "youtube")
+			+socialIcon("https://instagram.com/loudpose", "instagram")
+			+socialIcon("https://twitter.com/loudpose", "twitter")
+			+socialIcon("https://github.com/loudpose", "github")
+			//- a(href="#" target="_blank").footer__socials__link 
+			//- 	img(src="./img/instagram.svg", alt="").footer__socials__icon

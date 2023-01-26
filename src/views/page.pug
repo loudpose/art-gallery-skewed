@@ -1,5 +1,40 @@
+mixin image(src, title, instagram, web)
+	figure.gallery__item 
+		img.gallery__img(src=src, alt=title)
+		.gallery__item__bottom
+			a(href="#").gallery__title
+				figcaption=title
+			
+			.gallery__item__socials 
+				if (instagram)
+					a(href=instagram).gallery__item__socials__link
+						img(src="./img/instagram.svg", alt="Instagram").gallery__item__socials__icon
+				if (web)
+					a(href=web).gallery__item__socials__link
+						img(src="./img/web.svg", alt="Website").gallery__item__socials__icon
+
 main.content
 	section.cover 
 		.cover__text
 			h1 Hello
-			p Welcome to this repository
+			p Welcome to the gallery
+	section.gallery 
+		.gallery__one
+			+image("./img/6ed00f754b3547239501ef4d01ac3dad.jpg", "@stonecollages", "#", "#")
+			+image("./img/264083923_4630350337057421_1287623027358978510_n.jpg", "@_sbk_3696_", "#", "#")
+			+image("./img/126883204_379726106596784_3170180755463864114_n.jpg", "@tinycactus", "#", "#")
+			+image("./img/253912868_4697359680322761_1850134684992597610_n.jpg", "@yagedan.png", "#", "#")
+			+image("./img/69433605_171610690564934_2891897803201054544_n.jpg", "@jeffmaunory", "#", "#")
+			
+		.gallery__two
+			+image("./img/93501850_269871757370779_2933853001099988514_n.jpg", "@dishudaart", "#", "#")
+			+image("./img/133040217_430814224740590_4034713067779003477_n.jpg", "@||||", "#", "#")
+			+image("./img/129515615_875717463215523_4908593346242737794_n.jpg", "@_sbk_3696_", "#", "#")
+			+image("./img/46662412_1976604935974249_8198748916029843978_n.jpg", "@daniel_surva", "#", "#")
+			+image("./img/85107008_494516831246553_4789480714807824217_n.jpg", "@svenoaks", "#", "#")
+		
+		.gallery__three
+			+image("./img/94232868_3550647254952158_7208885667537879040_n.jpg", "@tebsittledream", "#", "#")
+			+image("./img/207918334_364958528386710_6434298737266539529_n.jpg", "@akz_architectura", "#", "#")
+			+image("./img/249217256_1030693364387215_1969668173151560765_n.jpg", "@daniel_surva", "#", "#")
+			+image("./img/42458089_10156697748684299_4771481646769635328_n.jpg", "@smallditch", "#", "#")

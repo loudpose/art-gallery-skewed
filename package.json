@@ -10,8 +10,11 @@
   "author": "Averyano",
   "devDependencies": {
     "@fontsource/roboto": "^4.5.8",
+    "@fontsource/roboto-condensed": "^4.5.9",
     "@parcel/transformer-pug": "^2.8.3",
     "@parcel/transformer-sass": "^2.8.3",
+    "i": "^0.3.7",
+    "npm": "^9.4.0",
     "parcel": "^2.8.3",
     "parcel-namer-rewrite": "^2.0.0-rc.3"
   },

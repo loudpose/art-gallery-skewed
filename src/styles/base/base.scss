@@ -1,37 +1,38 @@
 *,
 *:after,
 *:before {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html {
-  font-family: 'Roboto', sans-serif;
-  font-size: calc(100vw / 1920 * 10);
-  line-height: 1;
-  background: $color-white;
-  color: $color-black;
+	font-family: "Roboto";
+	font-size: calc(100vw / 1440 * 13);
+	line-height: 1;
+	background: $color-white;
+	color: $color-black;
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
-  outline: none;
+	text-decoration: none;
+	color: inherit;
+	outline: none;
 }
 
 button {
-  background: none;
-  border: none;
-  color: inherit;
-  cursor: pointer;
-  outline: none;
+	background: none;
+	border: none;
+	color: inherit;
+	cursor: pointer;
+	outline: none;
 }
 
 h1,
 h2,
 h3 {
-  font-weight: bold;
+	font-family: "Roboto Condensed";
+	font-weight: 400;
 }
 
 img {
-  pointer-events: none;
+	pointer-events: none;
 }
