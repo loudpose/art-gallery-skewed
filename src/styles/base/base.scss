@@ -12,6 +12,19 @@ html {
 	color: $color-black;
 }
 
+body {
+	max-width: 1920px;
+	margin: auto;
+}
+
+main {
+	min-height: 96vh;
+}
+
+footer {
+	min-height: 4vh;
+}
+
 a {
 	text-decoration: none;
 	color: inherit;
@@ -31,6 +44,10 @@ h2,
 h3 {
 	font-family: "Roboto Condensed";
 	font-weight: 400;
+}
+
+p {
+	font-size: $font-12;
 }
 
 img {

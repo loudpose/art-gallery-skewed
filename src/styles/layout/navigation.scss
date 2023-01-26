@@ -4,7 +4,7 @@
 	left: 0;
 	width: 100%;
 	display: flex;
-	padding: 2rem 5%;
+	padding: 2vh 2.2vw;
 }
 
 .nav__left {
@@ -35,5 +35,49 @@
 
 	&:hover {
 		color: hsl(0, 0%, 0%);
+	}
+}
+
+.nav__menu__icon {
+	width: 32px;
+	height: 32px;
+	position: relative;
+	cursor: pointer;
+}
+
+.nav__menu__icon__line {
+	width: 100%;
+	border: 1px $color-black solid;
+	border-radius: 2px;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	transition: all 0.44s ease-out;
+	// Hamburger
+	&:first-of-type {
+		transform: translateY(0px) rotate(0deg);
+	}
+	&:nth-child(2) {
+		transform: translateY(8px);
+		opacity: 1;
+	}
+	&:nth-child(3) {
+		transform: translateY(16px) rotate(0deg);
+	}
+}
+
+// add class .nav__menu__icon--active on click
+.nav__menu__icon--active > .nav__menu__icon__line {
+	// Cross
+	&:first-of-type {
+		transform: translateY(8px) rotate(45deg);
+	}
+	&:nth-child(2) {
+		transform: translateY(8px);
+		opacity: 0;
+	}
+	&:nth-child(3) {
+		transform: translateY(8px) rotate(-45deg);
 	}
 }
