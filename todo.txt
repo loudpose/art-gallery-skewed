@@ -1,6 +1,2 @@
-1. Trim the logo
-2. Add CSS for the menu
-
-Think about JS implementation. GSAP animations. Smooth scrolling.
-
+Add Menu Hover effect for text
 Maybe implement AddVertical method to AV-scroll, which would scroll the element when the mouse is over it. Should be pretty simple. 

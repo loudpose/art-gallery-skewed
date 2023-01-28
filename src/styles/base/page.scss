@@ -1,73 +1,100 @@
 .cover {
-	display: none;
-	@extend %center;
+  display: none;
+  @extend %center;
 }
 
 .gallery {
-	display: flex;
-	flex-direction: row;
-	align-content: flex-start;
-	justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  justify-content: center;
 
-	gap: 4.5rem;
+  gap: 4.5rem;
 
-	// max-width: 1440px;
-	margin: auto;
-	padding: 0 7vw;
-	margin-top: 24vh;
+  // max-width: 1440px;
+  margin: auto;
+  padding: 0 7vw;
+  margin-top: 24vh;
 
-	&__one {
-		margin-top: 14vh;
-	}
+  &__one {
+    margin-top: 14vh;
+  }
 
-	&__three {
-		margin-top: 20vh;
-	}
+  &__three {
+    margin-top: 20vh;
+  }
 
-	&__one,
-	&__two,
-	&__three {
-		width: 33%;
-		display: flex;
-		flex-direction: column;
-		gap: 7rem;
-	}
+  &__one,
+  &__two,
+  &__three {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+  }
 }
 
 .gallery__item {
+  perspective: 1024px;
 }
 .gallery__img {
 }
 .gallery__item__bottom {
-	display: flex;
-	padding: 1rem 1.2rem;
-	width: 100%;
-	align-items: center;
-	justify-content: space-between;
+  display: flex;
+  padding: 1rem 1.2rem;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
 }
+
 .gallery__title {
-	font-size: $font-12;
-	color: $color-black;
+  font-size: $font-12;
+  color: $color-black;
+  position: relative;
+  overflow: visible;
 }
-.gallery__title:hover {
-	color: $color-gray;
+
+.gallery__title::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -11%;
+  width: 125%;
+  height: 207%;
+  z-index: 1;
+  background-color: hsla(0, 0%, 80%, 0.1);
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
+.gallery__title:hover::before {
+  opacity: 1;
+}
+.gallery__title:active::before {
+  opacity: 1;
+  background-color: hsla(278, 100%, 87%, 0.2);
+}
+
 .gallery__item__socials {
-	display: flex;
-	align-items: center;
-	gap: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 .gallery__item__socials__link {
-	@extend %center;
-	height: 100%;
-	width: calc(0.7rem + 1vh);
-	opacity: 0.75;
+  @extend %center;
+  height: 100%;
+  width: calc(0.7rem + 1vh);
+  opacity: 0.55;
+  transition: opacity 0.2s;
 }
 .gallery__item__socials__link:hover {
-	opacity: 1;
+  opacity: 0.85;
+}
+.gallery__item__socials__link:active {
+  opacity: 1;
 }
 
 .gallery__item__socials__icon {
-	width: inherit;
-	height: inherit;
+  width: inherit;
+  height: inherit;
 }

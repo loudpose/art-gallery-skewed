@@ -1,55 +1,61 @@
 *,
 *:after,
 *:before {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-	font-family: "Roboto";
-	font-size: calc(100vw / 1440 * 13);
-	line-height: 1;
-	background: $color-white;
-	color: $color-black;
+  font-family: 'Roboto';
+  font-size: calc(100vw / 1440 * 13);
+  line-height: 1;
+  background: $color-white;
+  color: $color-black;
 }
 
 body {
-	max-width: 1920px;
-	margin: auto;
+  max-width: 1920px;
+  margin: auto;
+
+  // overflow: hidden;
+  overscroll-behavior-x: none;
+  caret-color: transparent;
+  // cursor: default;
+  // -webkit-tap-highlight-color: transparent;
 }
 
 main {
-	min-height: 96vh;
+  min-height: 96vh;
 }
 
 footer {
-	min-height: 4vh;
+  min-height: 4vh;
 }
 
 a {
-	text-decoration: none;
-	color: inherit;
-	outline: none;
+  text-decoration: none;
+  color: inherit;
+  outline: none;
 }
 
 button {
-	background: none;
-	border: none;
-	color: inherit;
-	cursor: pointer;
-	outline: none;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
 }
 
 h1,
 h2,
 h3 {
-	font-family: "Roboto Condensed";
-	font-weight: 400;
+  font-family: 'Roboto Condensed';
+  font-weight: 400;
 }
 
 p {
-	font-size: $font-12;
+  font-size: $font-12;
 }
 
 img {
-	pointer-events: none;
+  pointer-events: none;
 }
