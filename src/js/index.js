@@ -1,3 +1,4 @@
+import { Detection } from './classes/Detection';
 import Menu from './components/Menu';
 
 import GSAP from 'gsap';
@@ -5,8 +6,6 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 GSAP.registerPlugin(ScrollTrigger);
 
 import normalizeWheel from 'normalize-wheel';
-
-import { Detection } from './classes/Detection';
 
 class App {
 	constructor() {
@@ -26,6 +25,9 @@ class App {
 		this.addEventListeners();
 
 		this.update();
+
+		console.log('This site is powered by Averyano (2023)');
+		console.log("Check it out: 'https://averyano.com/' 🌿");
 	}
 
 	create() {
@@ -62,6 +64,7 @@ class App {
 			this.currentY += pixelY / 100;
 		});
 	}
+
 	update() {
 		this.frame = window.requestAnimationFrame(this.update.bind(this));
 
