@@ -68,10 +68,12 @@ export default class Menu {
       this.timeline.timeScale(1.5);
       this.timeline.reverse();
       this.elements.icon.classList.remove('nav__menu__icon--active');
+      document.body.classList.remove('menu--open');
     } else {
       this.timeline.timeScale(1);
       this.timeline.play();
       this.elements.icon.classList.add('nav__menu__icon--active');
+      document.body.classList.add('menu--open');
     }
   }
 

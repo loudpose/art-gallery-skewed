@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "build": "parcel build src/index.pug",
-    "start": "parcel serve src/index.pug --port 3000 --public-url=http://127.0.0.1:3000 --no-cache"
+    "start": "parcel serve src/index.pug --port 3000 --public-url=http://127.0.0.1:3000"
   },
   "keywords": [],
   "author": "Averyano",
@@ -30,6 +30,8 @@
   },
   "dependencies": {
     "gsap": "^3.11.4",
-    "normalize-wheel": "^1.0.1"
+    "normalize-wheel": "^1.0.1",
+    "semver-compare": "^1.0.0",
+    "ua-parser-js": "^1.0.35"
   }
 }

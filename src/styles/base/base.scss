@@ -10,6 +10,10 @@ html {
   line-height: 1;
   background: $color-white;
   color: $color-black;
+  scroll-behavior: smooth;
+  @include media('<phone') {
+    font-size: calc(100vw / 768 * 18);
+  }
 }
 
 body {

@@ -10,16 +10,19 @@
 
   z-index: 2;
 
-  @include media('<tablet') {
-    flex-direction: column-reverse;
-  }
-
   visibility: hidden;
   opacity: 0;
 }
 
 .menu__wrapper {
   @extend %center;
+
+  @include media('<phone') {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    height: 100vh;
+    padding-bottom: 12%;
+  }
 }
 /**
 * LEFT
@@ -30,7 +33,7 @@
   height: max-content;
   box-shadow: rgba(100, 100, 111, 0.12) 0px 0px 29px 0px;
 
-  @include media('<tablet') {
+  @include media('<phone') {
     width: 100%;
   }
 }
@@ -69,14 +72,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  flex-basis: 40%;
+  width: 40%;
   padding: 0 1.8rem;
   transition: all 0.35s ease-out;
 }
 
 .menu__item__link > .gallery__item__socials {
   gap: 0.5rem;
+
+  @include media('<phone') {
+    display: none;
+  }
 }
 
 /**
@@ -87,6 +93,11 @@
   @extend %center;
   width: 40%;
   padding: 4%;
+
+  @include media('<phone') {
+    width: 60%;
+    height: 40%;
+  }
 }
 .menu__right__item figcaption {
   @extend %center;

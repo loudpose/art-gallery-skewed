@@ -1,3 +1,8 @@
+.menu--open > .nav {
+  background: transparent;
+  box-shadow: none;
+}
+
 .nav {
   position: fixed;
   top: 0;
@@ -7,6 +12,15 @@
   padding: 2vh 2.2vw;
 
   z-index: 3;
+  transition: all 1s ease-out;
+
+  @include media('<phone') {
+    padding: 2vh 6.2vw;
+    background: white;
+    box-shadow: rgb(0 0 0 / 5%) 0px 6px 24px 0px,
+      rgb(0 0 0 / 8%) 0px 0px 0px 1px;
+    border-radius: 0 0 4px 4px;
+  }
 }
 
 .nav__left {
@@ -26,10 +40,28 @@
   display: block;
   height: auto;
   width: max-content;
+  position: relative;
 }
-.nav__logo img {
-  max-width: 64px;
+.nav__logo:hover > .nav__logo__image--hover {
+  opacity: 1;
+}
+.nav__logo:active > .nav__logo__image--hover {
+  opacity: 1;
+}
+.nav__logo__image {
+  max-width: 24px;
   height: auto;
+  z-index: 1;
+}
+.nav__logo__image--hover {
+  z-index: 2;
+  max-width: 24px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
 }
 
 .nav__menu__link {

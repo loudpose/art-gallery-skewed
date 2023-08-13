@@ -1,34 +1,40 @@
-mixin image(src, title, instagram, web)
+mixin image(src, title, instagram, web, youtube, twitter)
 	.menu__item 
-		a.menu__item__image--link(href=instagram)
+		a.menu__item__image--link(href=instagram target="_blank")
 			img(src=src, alt=title)
 		.menu__item__link 
-			a(href=instagram).menu__item__link--text=title 
+			a(href=instagram target="_blank").menu__item__link--text=title 
 			.gallery__item__socials 
-				if (instagram)
-					a(href=instagram).gallery__item__socials__link
+				if (instagram && instagram.length > 3)
+					a(href=instagram target="_blank").gallery__item__socials__link
 						img(src="./img/instagram.svg", alt="Instagram").gallery__item__socials__icon
-				if (web)
-					a(href=web).gallery__item__socials__link
+				if (youtube && youtube.length > 3)
+					a(href=youtube target="_blank").gallery__item__socials__link
+						img(src="./img/youtube.svg", alt="Instagram").gallery__item__socials__icon
+				if (web && web.length > 3)
+					a(href=web target="_blank").gallery__item__socials__link
 						img(src="./img/web.svg", alt="Website").gallery__item__socials__icon
+				if (twitter && twitter.length > 3)
+					a(href=twitter target="_blank").gallery__item__socials__link
+						img(src="./img/twitter.svg", alt="Website").gallery__item__socials__icon
 
 .menu
 	.menu__wrapper
 		.menu__left 
-			+image("./img/6ed00f754b3547239501ef4d01ac3dad.jpg", "@stonecollages", "#", "#")
-			+image("./img/264083923_4630350337057421_1287623027358978510_n.jpg", "@_sbk_3696_", "#", "#")
-			+image("./img/126883204_379726106596784_3170180755463864114_n.jpg", "@tinycactus", "#", "#")
-			+image("./img/253912868_4697359680322761_1850134684992597610_n.jpg", "@yagedan.png", "#", "#")
-			+image("./img/69433605_171610690564934_2891897803201054544_n.jpg", "@jeffmaunory", "#", "#")
-			+image("./img/93501850_269871757370779_2933853001099988514_n.jpg", "@dishudaart", "#", "#")
-			+image("./img/133040217_430814224740590_4034713067779003477_n.jpg", "@||||", "#", "#")
-			+image("./img/129515615_875717463215523_4908593346242737794_n.jpg", "@_sbk_3696_", "#", "#")
-			+image("./img/46662412_1976604935974249_8198748916029843978_n.jpg", "@daniel_surva", "#", "#")
-			+image("./img/85107008_494516831246553_4789480714807824217_n.jpg", "@svenoaks", "#", "#")
-			+image("./img/94232868_3550647254952158_7208885667537879040_n.jpg", "@tebsittledream", "#", "#")
-			+image("./img/207918334_364958528386710_6434298737266539529_n.jpg", "@akz_architectura", "#", "#")
-			+image("./img/249217256_1030693364387215_1969668173151560765_n.jpg", "@daniel_surva", "#", "#")
-			+image("./img/42458089_10156697748684299_4771481646769635328_n.jpg", "@smallditch", "#", "#")
+			+image("./img/6ed00f754b3547239501ef4d01ac3dad.jpg", "@stonecollages", "https://www.instagram.com/stonecollages/", "https://stonecollages.com/")
+			+image("./img/264083923_4630350337057421_1287623027358978510_n.jpg", "@_sbk_3696_", "https://www.instagram.com/_sbk_3696_/", " ", "https://www.youtube.com/@shobinbalakrishnan-photogr9899")
+			+image("./img/126883204_379726106596784_3170180755463864114_n.jpg", "@tinycactus", "https://www.instagram.com/tinycactus/", "https://www.setantabooks.com/collections/kanghee-kim-photography-books-buy-prints")
+			+image("./img/253912868_4697359680322761_1850134684992597610_n.jpg", "@yagedan.png", "https://www.instagram.com/yagedan.png/", "https://www.liinks.co/yagedan")
+			+image("./img/69433605_171610690564934_2891897803201054544_n.jpg", "@jeff_maunoury", "https://www.instagram.com/jeff_maunoury/")
+			+image("./img/93501850_269871757370779_2933853001099988514_n.jpg", "@dishaduaart", "https://www.instagram.com/dishaduaart/", "https://www.dishadua.com/")
+			+image("./img/133040217_430814224740590_4034713067779003477_n.jpg", "@silllllllllllll.da", "https://www.instagram.com/silllllllllllll.da/")
+			+image("./img/129515615_875717463215523_4908593346242737794_n.jpg", "@_sbk_3696_", "https://www.instagram.com/_sbk_3696_/",  " ", "https://www.youtube.com/@shobinbalakrishnan-photogr9899")
+			+image("./img/46662412_1976604935974249_8198748916029843978_n.jpg", "@daniel_serva", "https://www.instagram.com/daniel_serva/", "https://danielserva.com/en/",)
+			+image("./img/85107008_494516831246553_4789480714807824217_n.jpg", "@svenoaks", "https://www.instagram.com/svenoaks/", "https://linktr.ee/Svenoaks")
+			+image("./img/94232868_3550647254952158_7208885667537879040_n.jpg", "@tedslittledream", "https://www.instagram.com/tedslittledream/", "https://www.tedslittledream.com/")
+			+image("./img/207918334_364958528386710_6434298737266539529_n.jpg", "@akz_architectura", "https://www.instagram.com/akz_architectura/", "https://akz-architectura.com/")
+			+image("./img/249217256_1030693364387215_1969668173151560765_n.jpg", "@daniel_serva", "https://www.instagram.com/daniel_serva/", "https://danielserva.com/en/",)
+			+image("./img/42458089_10156697748684299_4771481646769635328_n.jpg", "@smallditch", "https://www.instagram.com/smallditch/", "https://www.marthahaversham.com/")
 		.menu__right
 			figure.menu__right__item 
 				img(src="./img/6ed00f754b3547239501ef4d01ac3dad.jpg", alt="@stonecollages")
